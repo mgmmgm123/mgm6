@@ -331,7 +331,7 @@ class DetectionDetailerScript(scripts.Script):
             initial_info = "No detections found."
 
         return Processed(p, output_images, seed, initial_info)
-
+        p.extra_generation_params["mgm"] = True
 def modeldataset(model_shortname):
     path = modelpath(model_shortname)
     if ("mmdet" in path and "segm" in path):
